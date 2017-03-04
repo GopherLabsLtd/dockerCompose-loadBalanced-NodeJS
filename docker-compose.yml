@@ -1,0 +1,32 @@
+version: "2"
+
+services:
+  nodeapp1:
+    build:
+      context: ./nodeapp
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "80"
+    networks:
+      - front-tier
+
+  nodeapp2:
+    extends:
+      service: nodeapp1
+  
+  nodeapp3:
+    extends:
+      service: nodeapp1
+  
+  nginx:
+    build: ./nginx
+    restart: always
+    ports:
+        - "80:80"
+    networks:
+      - front-tier
+
+networks:
+  front-tier:
+    driver: bridge
