@@ -6,12 +6,17 @@ This is a docker-compose setup running an express app, being load-balanced throu
 
 All NGINX configs has been intensely commented and explained, as well as the DockerFiles.
 
+### Requirements
+- [Docker](https://docs.docker.com/compose/install/ "Docker Compose Install")
+
 ### Usage
 To run it:
 
-    $ docker-compose up --build
+    docker-compose up --build
 
 ### Contributing
+If you feel that something is missing, make an issue! 🙂
+If you want do add something, just make a Pull Request.
 
 # License
 MIT License
