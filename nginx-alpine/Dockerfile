@@ -1,0 +1,23 @@
+# Get the latest Alpine Image from https://hub.docker.com/
+FROM alpine:latest
+
+# Grab the latest NGINX apk, remove the apk cache, and allow permissions
+RUN echo "http://dl-4.alpinelinux.org/alpine/v3.3/main" >> /etc/apk/repositories && \
+    apk add --update nginx=1.8.1-r1 && \
+    rm -rf /var/cache/apk/* && \
+    chown -R nginx:www-data /var/lib/nginx
+
+# Remove the default NGINX configurations
+RUN rm -v /etc/nginx/nginx.conf
+
+# Add our custom configuration file to replace the original one
+ADD nginx.conf /etc/nginx/
+
+RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+
+# "The EXPOSE instruction informs Docker that the container listens on the specified network ports at runtime"
+# https://docs.docker.com/engine/reference/builder/#expose
+EXPOSE 80
+
+# Start NGINX
+ENTRYPOINT ["/usr/sbin/nginx"]
