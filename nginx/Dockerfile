@@ -1,5 +1,5 @@
 # Get the NGINX Image from https://hub.docker.com/
-FROM nginx
+FROM nginx:1.11.10
 
 # Remove the default NGINX configurations
 RUN rm -v /etc/nginx/nginx.conf
