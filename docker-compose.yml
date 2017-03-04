@@ -1,8 +1,11 @@
+# Use docker-compose syntax Version 2
 version: "2"
 
 services:
+  # Our main "nodeapp" service which has the express aplication inside
   nodeapp1:
     build:
+      # Look for the Dockerfile inside the "nodeapp" folder
       context: ./nodeapp
       dockerfile: Dockerfile
     restart: always
@@ -10,7 +13,10 @@ services:
       - "80"
     networks:
       - front-tier
-
+  
+  # Our replicas of the main "nodeapp", just so that NGINX can load-balance
+  # E.g when there's a new version available of our app
+  # We'll take each one of these 3 services done, update them and bring them back up 1-by-1
   nodeapp2:
     extends:
       service: nodeapp1
@@ -19,9 +25,12 @@ services:
     extends:
       service: nodeapp1
   
+  # NGINX will reverse proxy the express application
   nginx:
     build: ./nginx
     restart: always
+
+    # Bind port 80 in the service to port 80 on the host
     ports:
         - "80:80"
     networks:
