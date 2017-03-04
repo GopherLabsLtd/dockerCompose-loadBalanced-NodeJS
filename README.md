@@ -1,4 +1,4 @@
-# dockerCompose-loadBalanced-NodeJS
+![Node.js application loadbalanced by NGINX inside Docker Containers](http://i.imgur.com/usKXQTY.png)
 ![nginx 1.11.10](https://img.shields.io/badge/nginx-1.11.10-brightgreen.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
 This is a lightweight example of a docker-compose setup running an express app, being load-balanced through NGINX.
