@@ -1,17 +1,22 @@
-![Node.js application loadbalanced by NGINX inside Docker Containers](http://i.imgur.com/usKXQTY.png)
+<img src="https://raw.githubusercontent.com/preciousDev/dockerCompose-loadBalanced-NodeJS/master/preview.jpg" alt="Node.js application loadbalanced by NGINX inside Docker Containers" height="150">
 
 ![nginx 1.11.10](https://img.shields.io/badge/nginx-1.11.10-brightgreen.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
-This is a lightweight example of a docker-compose setup running an express app, being load-balanced through NGINX.
+This is a docker-compose setup running an express app, being load-balanced through NGINX.
 
-All NGINX configs have been intensely commented and explained, as well as the DockerFiles.
+All NGINX configs has been intensely commented and explained, as well as the DockerFiles.
+
+### Requirements
+- [Docker](https://docs.docker.com/compose/install/ "Docker Compose Install")
 
 ### Usage
 To run it:
 
-    $ docker-compose up --build
+    docker-compose up --build
 
 ### Contributing
+If you feel that something is missing, make an issue! 🙂
+If you want do add something, just make a Pull Request.
 
 # License
 MIT License
