@@ -11,7 +11,7 @@ RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 # "The EXPOSE instruction informs Docker that the container listens on the specified network ports at runtime"
 # https://docs.docker.com/engine/reference/builder/#expose
-EXPOSE 80
+EXPOSE 80 443
 
 # Start NGINX
 CMD service nginx start
