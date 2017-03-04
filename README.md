@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/preciousDev/dockerCompose-loadBalanced-NodeJS/master/preview.jpg" alt="Node.js application loadbalanced by NGINX inside Docker Containers" height="150">
+<img src="https://raw.githubusercontent.com/preciousDev/dockerCompose-loadBalanced-NodeJS/master/preview.jpg" alt="Node.js application loadbalanced by NGINX inside Docker Containers" style="max-width: 100%;" width="650">
 
 ![nginx 1.11.10](https://img.shields.io/badge/nginx-1.11.10-brightgreen.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
