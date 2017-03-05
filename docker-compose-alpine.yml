@@ -7,7 +7,7 @@ services:
     build:
       # Look for the Dockerfile inside the "nodeapp" folder
       context: ./nodeapp
-      dockerfile: Dockerfile
+      dockerfile: alpine.Dockerfile
     restart: always
     ports:
       - "80"
