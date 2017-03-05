@@ -1,6 +1,11 @@
 # Get the NGINX Image from https://hub.docker.com/
 FROM nginx:1.11.10
 
+LABEL version="1.0"
+LABEL description="NGINX version 1.11.10"
+LABEL author="PreciousDev"
+LABEL authorURL="https://github.com/preciousDev"
+
 # Remove the default NGINX configurations
 RUN rm -v /etc/nginx/nginx.conf
 

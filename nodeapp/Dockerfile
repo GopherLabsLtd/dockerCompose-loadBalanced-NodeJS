@@ -1,6 +1,11 @@
 # Pull the node image (boron version is the TLS version)
 FROM node:boron
 
+LABEL version="1.0"
+LABEL description="Node Boron (TLS)"
+LABEL author="PreciousDev"
+LABEL authorURL="https://github.com/preciousDev"
+
 # Create the app directory
 RUN mkdir -p /usr/src/app1
 

@@ -1,6 +1,11 @@
 # Get the latest Alpine Image from https://hub.docker.com/
 FROM alpine:latest
 
+LABEL version="1.0"
+LABEL description="NGINX running on the Alpine image (5MB)"
+LABEL author="PreciousDev"
+LABEL authorURL="https://github.com/preciousDev"
+
 # Grab the latest NGINX apk, remove the apk cache, and allow permissions
 RUN echo "http://dl-4.alpinelinux.org/alpine/v3.3/main" >> /etc/apk/repositories && \
     apk add --update nginx=1.8.1-r1 && \
