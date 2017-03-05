@@ -13,6 +13,10 @@ All NGINX configs has been intensely commented and explained, as well as the Doc
 To run it:
 
     docker-compose up --build
+    
+To run the alpine version (5MB image):
+
+    docker-compose -f docker-compose-alpine.yml up --build
 
 ### Contributing
 If you feel that something is missing, make an issue! 🙂
